@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGUS & PILI</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <div class="audiodiv">
+        <!-- PENDIENTE: la canción elegida es "Yellowstone (Holding You)". Reemplazar el mp3. -->
+        <audio id="myAudio" preload="auto">
+            <source src="./yellowstone.mp3" type="audio/mpeg">
+        </audio>
+        <div id="playPauseBtn" class="play">
+            <img src="./img/notamusical.png" alt="Music icon">
+        </div>
+    </div>
+
+    <p data-aos="fade-up" class="titulocontador">Countdown:</p>
+    <div class="contador">
+        <div class="bloque">
+            <div data-aos="fade-up" id="dias" class="numero"></div>
+            <div data-aos="fade-up" class="etiqueta">Days</div>
+        </div>
+        <div class="bloque">
+            <div data-aos="fade-up" id="horas" class="numero"></div>
+            <div data-aos="fade-up" class="etiqueta">hours</div>
+        </div>
+        <div class="bloque">
+            <div data-aos="fade-up" id="minutos" class="numero"></div>
+            <div data-aos="fade-up" class="etiqueta">minutes</div>
+        </div>
+        <div class="bloque">
+            <div data-aos="fade-up" id="segundos" class="numero"></div>
+            <div data-aos="fade-up" class="etiqueta">seconds</div>
+        </div>
+    </div>
+
+    <div class="datos-ubicacion">
+        <div>
+            <img data-aos="fade-down" src="./img-editable/icono1.png" alt="">
+        </div>
+        <div class="datos">
+            <div>
+                <p data-aos="fade-up">5:45 PM - Ceremony<br>Parroquia Stella Maris, Montevideo</p>
+                <a data-aos="fade-up" class="boton" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parroquia+Stella+Maris+Montevideo+Uruguay">DIRECTIONS</a>
+            </div>
+            <br>
+            <div>
+                <p data-aos="fade-up">7:00 PM - Reception<br>La Hacienda, Camino de los Horneros, Canelones</p>
+                <a data-aos="fade-up" class="boton" target="_blank" href="https://www.google.com/maps/search/?api=1&query=La+Hacienda+Camino+de+los+Horneros+Canelones+Uruguay">DIRECTIONS</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="novios">
+        <!-- fotos1 = la foto de espaldas -->
+        <img src="./img-editable/fotos1.png" alt="">
+        <div class="icono2">
+            <img data-aos="fade-down" src="./img-editable/icono2.png" alt="">
+        </div>
+        <div class="icono3">
+            <img data-aos="fade-up" src="./img-editable/icono3.png" alt="">
+        </div>
+    </div>
+  <!--
+      <div class="quote">
+        <h2>We celebrate love, life, and those who taught us to enjoy both.</h2>
+    </div>
+    -->
+
+    <div class="timeline">
+        <p class="timeline-title">The wedding day...</p>
+        <div class="iconos">
+            <div class="iconos-block">
+                <img data-aos="fade-up" src="./img-editable/tulugar.png" alt="icon">
+                <p data-aos="fade-up">5:45 PM</p>
+                <P data-aos="fade-up" class="timing-text">Take your seat</P>
+            </div>
+            <div class="iconos-block">
+                <img data-aos="fade-up" src="./img-editable/anillos.png" alt="icon">
+                <p data-aos="fade-up">6:00 PM</p>
+                <P data-aos="fade-up" class="timing-text">Ceremony</P>
+            </div>
+            <div class="iconos-block">
+                <img data-aos="fade-up" src="./img-editable/copas.png" alt="icon">
+                <p data-aos="fade-up">7:00 PM</p>
+                <P data-aos="fade-up" class="timing-text">Cocktail hour</P>
+            </div>
+            <div class="iconos-block">
+                <img data-aos="fade-up" src="./img-editable/cena.png" alt="icon">
+                <p data-aos="fade-up">9:15 PM</p>
+                <P data-aos="fade-up" class="timing-text">Dinner</P>
+            </div>
+            <div class="iconos-block">
+                <img data-aos="fade-up" src="./img-editable/fiesta.png" alt="icon">
+                <p data-aos="fade-up">10:00 PM</p>
+                <P data-aos="fade-up" class="timing-text">Party</P>
+            </div>
+            <div class="iconos-block">
+                <img data-aos="fade-up" src="./img-editable/vueltaacasa.png" alt="icon">
+                <p data-aos="fade-up">4:00 AM</p>
+                <P data-aos="fade-up" class="timing-text">Time to head home</P>
+            </div>
+        </div>
+    </div>
+
+    <div id="section2" class="accordion">
+        <h3 data-aos="fade-up">Before you ask...</h3>
+
+        <div data-aos="fade-up" class="accordion-item">
+            <button class="accordion-header">WHAT SHOULD I WEAR?</button>
+            <div class="accordion-content">
+                <p>WE WANT YOU TO FEEL COMFORTABLE AND STYLISH, BUT ALSO DRESSED FOR A SPECIAL DAY. 📸 THE PHOTOS WILL LAST FOREVER, SO: ELEGANT AND FUN, BUT STRESS-FREE. DON'T FORGET THAT WHITE IS FOR THE BRIDE.🤍</p>
+                <br>
+                <p>DRESS CODE: FORMAL. TIE OPTIONAL.</p>
+                <br> <a target="_blank" class="boton2" href="https://ar.pinterest.com/pilileiva4/inspo/?invite_code=3d02262811454107a71a1829cfabb14a&sender=676666050170891439">INSPIRATION</a>
+                <br> <br>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" class="accordion-item">
+            <button class="accordion-header">WHAT CAN I GIFT YOU?</button>
+            <div class="accordion-content">
+                <p>HAVING YOU WITH US IS THE BEST GIFT, 🤍 BUT IF YOU'D LIKE TO CONTRIBUTE TO THIS NEW CHAPTER, HERE ARE OUR DETAILS</p>
+                <div class="gift-block">
+                    <div class="gift-box">
+                        <div class="boton2" data-copy="4409392">COPY PILI'S ACCOUNT</div>
+                    </div>
+                    <br>
+                    <p>Banco Itaú - USD savings account No. 4409392<br>Account holder: Pilar Leiva</p>
+                    <br>
+                    <div class="gift-box">
+                        <div class="boton2" data-copy="4615142">COPY AGUS'S ACCOUNT</div>
+                    </div>
+                    <br>
+                    <p>Banco Itaú - USD savings account No. 4615142<br>Account holder: Agustín Millot</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div data-aos="fade-up" class="accordion-item">
+            <button class="accordion-header">CAN I BRING MY KIDS?</button>
+            <div class="accordion-content">
+                <p>WE LOVE THE LITTLE ONES, BUT THIS CELEBRATION IS ADULTS ONLY. 🤍</p>
+            </div>
+        </div>
+        <div data-aos="fade-up" class="accordion-item">
+            <button class="accordion-header">WHERE CAN I PARK?</button>
+            <div class="accordion-content">
+                <p>WE KNOW YOU DON'T WANT TO DRIVE AROUND IN CIRCLES! THE VENUE HAS PLENTY OF PARKING SPACE.</p>
+            </div>
+        </div>
+         <div data-aos="fade-up" class="accordion-item">
+            <button class="accordion-header">WHAT IF I HAVE MORE QUESTIONS?</button>
+            <div class="accordion-content">
+                <p>WE HOPE WE'VE ANSWERED ALL YOUR QUESTIONS, BUT IF YOU NEED ANYTHING ELSE, FEEL FREE TO CONTACT US UP TO 48 HOURS BEFORE THE EVENT, OR OUR CLOSEST FAMILY MEMBERS WITHIN THE LAST 48 HOURS.</p>
+            </div>
+        </div>
+
+
+        <div class="icono4">
+            <img data-aos="fade-down" src="./img-editable/icono4.png" alt="">
+        </div>
+        <div class="icono5">
+            <img data-aos="fade-up" src="./img-editable/icono5.png" alt="">
+        </div>
+    </div>
+
+     <div class="forms">
+
+<form name="asistenciaform" method="POST" action="https://script.google.com/macros/s/AKfycbxnbwqcWN1QHX-z8qWU-iIwGa-PmWAoDwq_SS1qeUnALk8n-8NgAfJKQ2cFLjxRn-o7oQ/exec" class="formulario">
+
+    <label data-aos="fade-up" class="formtitle">All we need is you. Will you join us?</label>
+
+    <!-- Los "value" quedan en español para que la planilla sea igual a la de la versión en español -->
+    <div class="radio-group">
+        <label class="radio-option">
+        <input type="radio" name="ASISTENCIA" value="sí" required />
+        <span>Yes</span>
+        </label>
+        <label class="radio-option">
+        <input type="radio" name="ASISTENCIA" value="no" />
+        <span>No</span>
+        </label>
+    </div>
+
+    <input type="text" name="NOMBRE" placeholder="First name" required />
+    <input type="text" name="APELLIDO" placeholder="Last name" required />
+
+    <select id="dietaSelect" class="dieta-select">
+        <option value="" disabled selected>Dietary restrictions</option>
+        <option value="Sin restricciones">No restrictions</option>
+        <option value="Vegetariano">Vegetarian</option>
+        <option value="Vegano">Vegan</option>
+        <option value="Celíaco">Celiac / gluten-free</option>
+        <option value="Alergias">Allergies (please specify)</option>
+    </select>
+
+    <input type="text" id="alergiasInput" placeholder="What are you allergic to?" style="display:none;" />
+
+    <!-- Este es el que se manda a la planilla -->
+    <input type="hidden" name="DIETA" id="dietaFinal" />
+
+    <input type="text" name="CANCION" placeholder="What song can't be missing?" />
+    <input type="text" name="MENSAJE" placeholder="Leave a message for the couple" />
+
+    <button type="submit" class="boton">SEND</button>
+</form>
+
+<script>
+  (function () {
+    const select = document.getElementById('dietaSelect');
+    const alergias = document.getElementById('alergiasInput');
+    const final = document.getElementById('dietaFinal');
+
+    function actualizar() {
+      if (select.value === 'Alergias') {
+        alergias.style.display = '';
+        alergias.required = true;
+        final.value = alergias.value.trim() ? 'Alergias: ' + alergias.value.trim() : 'Alergias';
+      } else {
+        alergias.style.display = 'none';
+        alergias.required = false;
+        alergias.value = '';
+        final.value = select.value;
+      }
+    }
+
+    select.addEventListener('change', actualizar);
+    alergias.addEventListener('input', actualizar);
+  })();
+</script>
+        <p data-aos="fade-up">PLEASE FILL OUT <br> ONE FORM PER PERSON<br> BEFORE JANUARY 10.</p>
+    </div>
+
+    <div class="novios">
+        <!-- fotos2 = la otra foto -->
+        <img src="./img-editable/fotos2.png" alt="">
+        <div class="icono6">
+            <img data-aos="fade-up" src="./img-editable/icono6.png" alt="">
+        </div>
+    </div>
+
+    <div class="end">
+        <img data-aos="fade-up" src="./img-editable/manosanillos.png" alt="">
+        <h2 data-aos="fade-up">Agus &amp; Pili</h2>
+        <p data-aos="fade-down">We can't wait to see you</p>
+    </div>
+
+    <footer>
+        <div class="contenido">
+            <div>
+                <img src="./img/logosiquiero.png" alt="Si quiero icon">
+                <p>Made with &hearts; <br>
+                &#169; <b>Si,quiero!</b> - smart invitations.
+                <br> All rights reserved.</p>
+            </div>
+            <div class="contenido-list">
+                <ul>
+                    <li><a target="_blank" href="https://www.instagram.com/siquiero.arg/"><i class="bi bi-instagram"></i></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/Invitaciones-web-112187784608681"><i class="bi bi-facebook"></i></a></li>
+                    <li><a target="_blank" href="mailto:siquiero.invitaciones@gmail.com"><i class="bi bi-envelope"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Verificar: el nombre de archivo abajo tiene "countdwon" — si el archivo real
+         se llama "countdown.js" el contador no va a cargar. -->
+    <!-- PENDIENTE: la fecha del contador está en countdwon.js. Cambiarla a 30/01/2027 18:00. -->
+    <script src="./countdwon.js"></script>
+    <script src="./reproductor.js"></script>
+    <script src="./form.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement-and-player.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init();
+
+            // Reproduce el audio apenas la persona hace el primer scroll
+            var audio = document.getElementById('myAudio');
+            function playOnScroll() {
+                audio.play().catch(function (e) {
+                    console.warn('El navegador bloqueó la reproducción automática', e);
+                });
+                document.removeEventListener('scroll', playOnScroll);
+            }
+            document.addEventListener('scroll', playOnScroll);
+
+            // Acordeón de preguntas frecuentes (uno abierto a la vez)
+            var headers = document.querySelectorAll('.accordion-header');
+            headers.forEach(function (header) {
+                header.addEventListener('click', function () {
+                    var item = header.parentElement;
+                    var yaEstabaActivo = item.classList.contains('active');
+                    headers.forEach(function (otroHeader) {
+                        otroHeader.parentElement.classList.remove('active');
+                    });
+                    if (!yaEstabaActivo) item.classList.add('active');
+                });
+            });
+
+            // Copiar número de cuenta al portapapeles
+            document.querySelectorAll('[data-copy]').forEach(function (el) {
+                el.addEventListener('click', function () {
+                    copiarAlPortapapeles(el.getAttribute('data-copy'));
+                });
+            });
+        });
+
+        function copiarAlPortapapeles(texto) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(texto)
+                    .then(function () { alert('"' + texto + '" copied to your clipboard'); })
+                    .catch(function () { copiarAlPortapapeleFallback(texto); });
+            } else {
+                copiarAlPortapapeleFallback(texto);
+            }
+        }
+
+        function copiarAlPortapapeleFallback(texto) {
+            var tempInput = document.createElement('input');
+            document.body.appendChild(tempInput);
+            tempInput.value = texto;
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('"' + texto + '" copied to your clipboard');
+        }
+    </script>
+
+</body>
+</html>
